@@ -1,0 +1,433 @@
+.meetings-container {
+  padding: var(--space-6);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.meetings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-6);
+}
+
+.meetings-header h1 {
+  font-size: var(--font-2xl);
+  color: var(--gray-900);
+  margin: 0;
+}
+
+.dark-mode .meetings-header h1 {
+  color: var(--gray-100);
+}
+
+.new-meeting-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-4);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.new-meeting-btn:hover {
+  background-color: var(--primary-dark);
+}
+
+.meetings-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.meeting-card {
+  display: flex;
+  background-color: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.dark-mode .meeting-card {
+  background-color: var(--surface);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.meeting-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.dark-mode .meeting-card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.15);
+}
+
+.meeting-time {
+  width: 120px;
+  background-color: var(--gray-100);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.dark-mode .meeting-time {
+  background-color: var(--gray-800);
+}
+
+.time-badge {
+  background-color: var(--warning);
+  color: var(--white);
+  font-weight: 600;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-size: var(--font-sm);
+}
+
+.time-duration {
+  font-size: var(--font-xs);
+  color: var(--gray-600);
+}
+
+.dark-mode .time-duration {
+  color: var(--gray-400);
+}
+
+.meeting-details {
+  flex: 1;
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.meeting-title {
+  font-size: var(--font-xl);
+  font-weight: 600;
+  margin: 0;
+  color: var(--gray-900);
+}
+
+.dark-mode .meeting-title {
+  color: var(--gray-100);
+}
+
+.meeting-location {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--gray-600);
+  font-size: var(--font-sm);
+}
+
+.dark-mode .meeting-location {
+  color: var(--gray-400);
+}
+
+.meeting-participants {
+  display: flex;
+  gap: var(--space-2);
+  font-size: var(--font-sm);
+}
+
+.participants-label {
+  color: var(--gray-700);
+  font-weight: 500;
+}
+
+.dark-mode .participants-label {
+  color: var(--gray-300);
+}
+
+.participants-list {
+  color: var(--gray-600);
+}
+
+.dark-mode .participants-list {
+  color: var(--gray-400);
+}
+
+.meeting-description {
+  color: var(--gray-700);
+  font-size: var(--font-sm);
+  margin: var(--space-2) 0;
+}
+
+.dark-mode .meeting-description {
+  color: var(--gray-300);
+}
+
+.meeting-actions {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.join-btn {
+  background-color: var(--success);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--font-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.join-btn:hover {
+  background-color: var(--success-dark);
+}
+
+.edit-btn {
+  background-color: var(--gray-200);
+  color: var(--gray-700);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--font-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.dark-mode .edit-btn {
+  background-color: var(--gray-700);
+  color: var(--gray-300);
+}
+
+.edit-btn:hover {
+  background-color: var(--gray-300);
+}
+
+.dark-mode .edit-btn:hover {
+  background-color: var(--gray-600);
+}
+
+.cancel-btn {
+  background-color: var(--gray-200);
+  color: var(--error);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--font-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.dark-mode .cancel-btn {
+  background-color: var(--gray-700);
+}
+
+.cancel-btn:hover {
+  background-color: var(--error);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .meetings-container {
+    padding: var(--space-4);
+  }
+  
+  .meeting-card {
+    flex-direction: column;
+  }
+  
+  .meeting-time {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: var(--space-3);
+  }
+}
+
+/* Modal Styles */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.create-meeting-modal {
+  background-color: var(--white);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 600px;
+  box-shadow: var(--shadow-xl);
+  animation: slideIn 0.3s ease-out;
+}
+
+.dark-mode .create-meeting-modal {
+  background-color: var(--surface);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.dark-mode .modal-header {
+  border-bottom-color: var(--gray-700);
+}
+
+.modal-header h2 {
+  font-size: var(--font-xl);
+  font-weight: 600;
+  margin: 0;
+  color: var(--gray-900);
+}
+
+.dark-mode .modal-header h2 {
+  color: var(--gray-100);
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--gray-500);
+  transition: color var(--transition-fast);
+}
+
+.close-btn:hover {
+  color: var(--gray-900);
+}
+
+.dark-mode .close-btn:hover {
+  color: var(--gray-100);
+}
+
+form {
+  padding: var(--space-6);
+}
+
+.form-group {
+  margin-bottom: var(--space-4);
+}
+
+.form-row {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+label {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-size: var(--font-sm);
+  font-weight: 500;
+  color: var(--gray-700);
+}
+
+.dark-mode label {
+  color: var(--gray-300);
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+textarea,
+select {
+  width: 100%;
+  padding: var(--space-3);
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-md);
+  background-color: var(--white);
+  font-size: var(--font-md);
+  color: var(--gray-800);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.dark-mode input[type="text"],
+.dark-mode input[type="date"],
+.dark-mode input[type="time"],
+.dark-mode textarea,
+.dark-mode select {
+  background-color: var(--gray-800);
+  border-color: var(--gray-700);
+  color: var(--gray-200);
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.dark-mode input[type="text"]:focus,
+.dark-mode input[type="date"]:focus,
+.dark-mode input[type="time"]:focus,
+.dark-mode textarea:focus,
+.dark-mode select:focus {
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+.submit-btn {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-4);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.submit-btn:hover {
+  background-color: var(--primary-dark);
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+

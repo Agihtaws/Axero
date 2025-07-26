@@ -1,0 +1,281 @@
+.announcements-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--space-6);
+}
+
+.announcements-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-6);
+}
+
+.announcements-page-header h1 {
+  font-size: var(--font-2xl);
+  color: var(--gray-900);
+  margin: 0;
+}
+
+.dark-mode .announcements-page-header h1 {
+  color: var(--gray-100);
+}
+
+.announcements-page-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.create-announcement {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-6);
+}
+
+/* Add this to AnnouncementsPage.css */
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.create-announcement-modal {
+  background-color: var(--white);
+  border-radius: var(--radius-lg);
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+}
+
+.dark-mode .create-announcement-modal {
+  background-color: var(--surface);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.dark-mode .modal-header {
+  border-color: var(--gray-700);
+}
+
+.modal-header h2 {
+  font-size: var(--font-xl);
+  margin: 0;
+  color: var(--gray-900);
+}
+
+.dark-mode .modal-header h2 {
+  color: var(--gray-100);
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--gray-500);
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color var(--transition-fast);
+}
+
+.close-btn:hover {
+  background-color: var(--gray-100);
+  color: var(--gray-700);
+}
+
+.dark-mode .close-btn:hover {
+  background-color: var(--gray-700);
+  color: var(--gray-300);
+}
+
+.create-announcement-modal form {
+  padding: var(--space-6);
+}
+
+.form-group {
+  margin-bottom: var(--space-4);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-weight: 500;
+  color: var(--gray-700);
+}
+
+.dark-mode .form-group label {
+  color: var(--gray-300);
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+  width: 100%;
+  padding: var(--space-3);
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-md);
+  font-size: var(--font-md);
+  background-color: var(--white);
+  color: var(--gray-900);
+  transition: border-color var(--transition-fast);
+}
+
+.dark-mode .form-group input[type="text"],
+.dark-mode .form-group textarea {
+  border-color: var(--gray-600);
+  background-color: var(--gray-800);
+  color: var(--gray-100);
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px var(--primary-light);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.checkbox-group label {
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.cancel-btn {
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--gray-100);
+  color: var(--gray-700);
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-md);
+  font-size: var(--font-md);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.dark-mode .cancel-btn {
+  background-color: var(--gray-700);
+  color: var(--gray-300);
+  border-color: var(--gray-600);
+}
+
+.cancel-btn:hover {
+  background-color: var(--gray-200);
+}
+
+.dark-mode .cancel-btn:hover {
+  background-color: var(--gray-600);
+}
+
+.submit-btn {
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--font-md);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.submit-btn:hover {
+  background-color: var(--primary-dark);
+}
+
+.header-actions {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.mark-all-read-btn {
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--gray-100);
+  color: var(--gray-700);
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-md);
+  font-size: var(--font-sm);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.dark-mode .mark-all-read-btn {
+  background-color: var(--gray-700);
+  color: var(--gray-300);
+  border-color: var(--gray-600);
+}
+
+.mark-all-read-btn:hover {
+  background-color: var(--gray-200);
+}
+
+.dark-mode .mark-all-read-btn:hover {
+  background-color: var(--gray-600);
+}
+
+.create-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--font-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.create-btn:hover {
+  background-color: var(--primary-dark);
+}
+
+.create-btn svg {
+  width: 16px;
+  height: 16px;
+}
